@@ -47,11 +47,11 @@ $result = $conn->query($sql);
                 </thead>
                 <tbody>
                     <?php if ($result->num_rows > 0) : ?>
-                        <tr>
-                            <?php while ($row = $result->fetch_assoc()) : ?>
-                                <td><?php echo $row["ordernumber"] ?></td>
-                                <td>
-                                    <?php
+                    <?php while ($row = $result->fetch_assoc()) : ?>
+                    <tr>
+                        <td><?php echo $row["ordernumber"] ?></td>
+                        <td>
+                            <?php
                                     switch ($row["prize"]):
                                         case 2:
                                             echo "Golden Waffle";
@@ -75,10 +75,11 @@ $result = $conn->query($sql);
                                             echo "This is not working";
                                     endswitch;
                                     ?>
-                                </td>
-                                <td><button class="button is-small is-info" data-order="<?php echo $row["ordernumber"] ?>">Done</button></td>
-                            <?php endwhile; ?>
-                        </tr>
+                        </td>
+                        <td><button class="button is-small is-info"
+                                data-order="<?php echo $row["ordernumber"] ?>">Done</button></td>
+                    </tr>
+                    <?php endwhile; ?>
                     <?php endif; ?>
                 </tbody>
             </table>

@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'ClearfaceGothicLH';
-  src: url('./fonts/ClearfaceGothicLH-Regular.woff2') format('woff2'),
-      url('./fonts/ClearfaceGothicLH-Regular.woff') format('woff');
+  src: url('./fonts/ClearfaceGothicLH-Medium.woff2') format('woff2'),
+      url('./fonts/ClearfaceGothicLH-Medium.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -58,6 +58,10 @@ a {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px, rgba(0, 0, 0, 0.05) 0px 3px 0px;
   transform: rotate(0deg);
   transform: scale(1.4);
+}
+
+#spin.disable {
+  pointer-events: none;
 }
 
 #wheel:before {
@@ -299,6 +303,15 @@ h1 {
   margin-top: 50px;
   margin-bottom: 80px;
   max-width: 268px;
+}
+
+.the__wheel__img {
+  width: 100%;
+  display: none;
+}
+
+.the__wheel__img.visible {
+  display: inline-block;
 }
 
 .button.is-primary {

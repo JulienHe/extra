@@ -3,7 +3,7 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const order = urlParams.get('order')
 
-if(!order) {
+if (!order) {
 	window.location = '/';
 }
 
@@ -18,11 +18,12 @@ $(document).ready(function () {
 	/*WHEEL SPIN FUNCTION*/
 	$('#spin').click(function () {
 		var prize = 0;
+		$('#spin').addClass('disable');
 
 		$.ajax({
 			type: "POST",
 			url: 'getPrize.php',
-			data: {orderNumber: order},
+			data: { orderNumber: order },
 			success: function (response) {
 				prize = parseInt(response);
 				/*multiply the degree by number of clicks generate random number between 1 - 360, then add to the new degree*/
@@ -66,6 +67,37 @@ $(document).ready(function () {
 					noY = t.offset().top;
 
 				});
+
+				let textPrize;
+				switch (prize) {
+					case 2:
+						textPrize = "Golden Waffle";
+						break;
+					case 3:
+						textPrize = "St Perpète Soap";
+						break;
+					case 4:
+						textPrize = "EX-O Tote Bag ";
+						break;
+					case 5:
+						textPrize = "Baby Silk Scarf";
+						break;
+					case 6:
+						textPrize = "50€ Voucher";
+						break;
+					case 7:
+						textPrize = "300€ Voucher";
+						break;
+					default:
+						textPrize = "Too bad";
+				}
+				console.log(textPrize);
+				setTimeout(function () {
+					$('.txt').html(textPrize);
+					$('#spin').remove();
+					$('#wheel').remove();
+					$('.the__wheel__img').addClass('visible');
+				}, 6200)
 			}
 		});
 	});
