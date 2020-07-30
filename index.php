@@ -9,7 +9,7 @@
 
     <title>EXTRA-ORDINAIRE Wheel</title>
 
-    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon" />
+    <link id="favicon" rel="icon" href="./wheel.jpg" type="image/x-icon" />
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="./bulma.css" />
     <link rel="stylesheet" href="./style.css" />
@@ -24,7 +24,8 @@
             <h2>Please type the code we sent you by email</h2>
             <div class="field">
                 <div class="control">
-                    <input class="input" id="orderNumber" name="orderNumber" type="text" placeholder="Your order number" required>
+                    <input class="input" id="orderNumber" name="orderNumber" type="text" placeholder="Your order number"
+                        required>
                 </div>
             </div>
             <button type="submit" class="button is-primary">Submit</button>
@@ -32,10 +33,10 @@
     </div>
 
     <div class="notif">
-      <div class="notification is-danger">
-          The code you entered is not valid.
-      </div>
-  </div>
+        <div class="notification is-danger">
+            The code you entered is not valid.
+        </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- import the webpage's client-side javascript file -->
     <script src="js/index.js" defer></script>

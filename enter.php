@@ -9,7 +9,7 @@
 
     <title>EXTRA-ORDINAIRE Wheel</title>
 
-    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon" />
+    <link id="favicon" rel="icon" href="./wheel.jpg" type="image/x-icon" />
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="./bulma.css" />
     <link rel="stylesheet" href="./style.css" />

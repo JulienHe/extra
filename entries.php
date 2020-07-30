@@ -9,7 +9,7 @@
 
     <title>EXTRA-ORDINAIRE Wheel</title>
 
-    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon" />
+    <link id="favicon" rel="icon" href="./wheel.jpg" type="image/x-icon" />
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="./bulma.css" />
     <link rel="stylesheet" href="./style.css" />
@@ -47,11 +47,11 @@ $result = $conn->query($sql);
                 </thead>
                 <tbody>
                     <?php if ($result->num_rows > 0) : ?>
-                    <tr>
-                        <?php while ($row = $result->fetch_assoc()) : ?>
-                        <td><?php echo $row["ordernumber"] ?></td>
-                        <td>
-                            <?php
+                        <tr>
+                            <?php while ($row = $result->fetch_assoc()) : ?>
+                                <td><?php echo $row["ordernumber"] ?></td>
+                                <td>
+                                    <?php
                                     switch ($row["prize"]):
                                         case 2:
                                             echo "Golden Waffle";
@@ -75,11 +75,10 @@ $result = $conn->query($sql);
                                             echo "This is not working";
                                     endswitch;
                                     ?>
-                        </td>
-                        <td><button class="button is-small is-info"
-                                data-order="<?php echo $row["ordernumber"] ?>">Done</button></td>
-                        <?php endwhile; ?>
-                    </tr>
+                                </td>
+                                <td><button class="button is-small is-info" data-order="<?php echo $row["ordernumber"] ?>">Done</button></td>
+                            <?php endwhile; ?>
+                        </tr>
                     <?php endif; ?>
                 </tbody>
             </table>

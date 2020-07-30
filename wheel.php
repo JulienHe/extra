@@ -9,7 +9,7 @@
 
   <title>EXTRA-ORDINAIRE Wheel</title>
 
-  <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon" />
+  <link id="favicon" rel="icon" href="./wheel.jpg" type="image/x-icon" />
   <!-- import the webpage's stylesheet -->
   <link rel="stylesheet" href="./style.css" />
 </head>
@@ -17,36 +17,36 @@
 <body>
   <?php
 
-include_once 'config.php';
+  include_once 'config.php';
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
+  // Create connection
+  $conn = new mysqli($servername, $username, $password, $dbname);
+  // Check connection
+  if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-}
+  }
 
-if (isset($_GET['order'])) {
+  if (isset($_GET['order'])) {
     $number = $_GET['order'];
     $sql = "SELECT id FROM orders WHERE ordernumber = $number";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        // output data of each row
-        $sql = "SELECT prize FROM winner WHERE ordernumber = $number";
-        $result = $conn->query($sql);
-        if ($result->num_rows > 0) {
+      // output data of each row
+      $sql = "SELECT prize FROM winner WHERE ordernumber = $number";
+      $result = $conn->query($sql);
+      if ($result->num_rows > 0) {
 
-            ?>
+  ?>
         <div id="wrapper" class="wheely">
           <h1>
             <img src="/logo.jpg" alt="" width="360">
           </h1>
           <p>You already won your prize! <br />If you have any issue, contact us +32.460 96 41 99</p>
         </div>
-        <?php
-} else {
-            ?>
+      <?php
+      } else {
+      ?>
 
         <div id="wrapper" class="wheely">
           <h1>
@@ -76,21 +76,21 @@ if (isset($_GET['order'])) {
         <!-- import the webpage's client-side javascript file -->
         <script src="js/script.js" defer></script>
 
-  <?php
-}
+      <?php
+      }
     } else {
-        ?>
-        <div id="wrapper" class="wheely">
-          <h1>
-            <img src="/logo.jpg" alt="" width="360">
-          </h1>
-          <p>Oups, this code doesn't exist!</p>
-        </div>
-        <?php
+      ?>
+      <div id="wrapper" class="wheely">
+        <h1>
+          <img src="/logo.jpg" alt="" width="360">
+        </h1>
+        <p>Oups, this code doesn't exist!</p>
+      </div>
+  <?php
     }
     $conn->close();
-}
-?>
+  }
+  ?>
 </body>
 
 </html>
