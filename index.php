@@ -21,7 +21,7 @@
             <img src="/logo.jpg" alt="" width="360">
         </h1>
         <form action="checkOrder.php" id="orderform">
-            <h2>Please provide us your order number</h2>
+            <h2>Please type the code we sent you by email</h2>
             <div class="field">
                 <div class="control">
                     <input class="input" id="orderNumber" name="orderNumber" type="text" placeholder="Your order number" required>
@@ -31,7 +31,11 @@
         </form>
     </div>
 
-    <div id="txt"></div>
+    <div class="notif">
+      <div class="notification is-danger">
+          The code you entered is not valid.
+      </div>
+  </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- import the webpage's client-side javascript file -->
     <script src="js/index.js" defer></script>

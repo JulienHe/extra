@@ -156,9 +156,6 @@ a {
   display: inline-block;
   margin-left: -30px;
   top: -80px;
-
-  text-shadow: rgba(255, 255, 255, 0.1) 0px -1px 0px,
-    rgba(0, 0, 0, 0.2) 0px 1px 0px;
 }
 
 #wheel div.sec:nth-child(1) span {
@@ -289,7 +286,8 @@ input {
 
 #wrapper form {
   margin: 0 auto;
-  max-width: 400px;
+  width: 100%;
+  max-width: 440px;
 }
 
 h1 {
@@ -303,21 +301,26 @@ h1 {
   max-width: 268px;
 }
 
-.button {
+.button.is-primary {
   background-color: #eb8653 !important;
 }
 
 .notif {
-  position: absolute;
-  top: 20px;
-  right: 0px;
-  width: 220px;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
 }
 
 .notification {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
   opacity: 0;
+  text-align: center;
   transition: opacity .2s ease .2s;
 }
 

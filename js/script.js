@@ -24,8 +24,7 @@ $(document).ready(function () {
 			url: 'getPrize.php',
 			data: {orderNumber: order},
 			success: function (response) {
-				console.log(response);
-				prize = 7;
+				prize = parseInt(response);
 				/*multiply the degree by number of clicks generate random number between 1 - 360, then add to the new degree*/
 				var totalDegree = degree + (prize * 60);
 

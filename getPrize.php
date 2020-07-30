@@ -17,10 +17,9 @@ if ($result->num_rows > 0) {
     // output data of each row
     $theID = 0;
     while($row = $result->fetch_assoc()) {
-        echo json_encode(array('prize' => $row["prize"]));
+        echo $row["prize"];
         $theID = $row["id"];
     }
-    var_dump($theID);
     $sqlUpdate = "UPDATE winner SET ordernumber=$number WHERE id=$theID";
     $resultUPDATE = $conn->query($sqlUpdate);
 } else {
