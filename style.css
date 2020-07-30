@@ -1,0 +1,327 @@
+@font-face {
+  font-family: 'ClearfaceGothicLH';
+  src: url('./fonts/ClearfaceGothicLH-Regular.woff2') format('woff2'),
+      url('./fonts/ClearfaceGothicLH-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 18px;
+  font-family: "ClearfaceGothicLH", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: #34495e;
+}
+
+/*WRAPPER*/
+#wrapper {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  height: 100%;
+  flex-grow: 1;
+  position: relative;
+}
+
+#wrapper.wheely {
+  align-items: center;
+}
+
+#txt {
+  color: #eaeaea;
+}
+
+/*WHEEL*/
+#wheel {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 8px solid #fff;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px, rgba(0, 0, 0, 0.05) 0px 3px 0px;
+  transform: rotate(0deg);
+  transform: scale(1.4);
+}
+
+#wheel:before {
+  content: "";
+  position: absolute;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 242px;
+  height: 242px;
+  border-radius: 50%;
+  z-index: 1000;
+  left: 0;
+}
+
+#inner-wheel {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 6s cubic-bezier(0, 0.99, 0.44, 0.99);
+  -moz-transition: all 6 cubic-bezier(0, 0.99, 0.44, 0.99);
+  -o-transition: all 6s cubic-bezier(0, 0.99, 0.44, 0.99);
+  -ms-transition: all 6s cubic-bezier(0, 0.99, 0.44, 0.99);
+  transition: all 6s cubic-bezier(0, 0.99, 0.44, 0.99);
+}
+
+#wheel div.sec {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 130px 75px 0;
+  border-color: #19c transparent;
+  transform-origin: 75px 129px;
+  left: 50px;
+  top: -4px;
+  opacity: 1;
+}
+
+#wheel div.sec:nth-child(1) {
+  transform: rotate(60deg);
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  border-color: black transparent;
+}
+#wheel div.sec:nth-child(2) {
+  transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  -moz-transform: rotate(120deg);
+  -o-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  border-color: #ffcc03 transparent;
+}
+#wheel div.sec:nth-child(3) {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  border-color: #c4003e transparent;
+}
+#wheel div.sec:nth-child(4) {
+  transform: rotate(240deg);
+  -webkit-transform: rotate(240deg);
+  -moz-transform: rotate(240deg);
+  -o-transform: rotate(240deg);
+  -ms-transform: rotate(240deg);
+  border-color: #17a1e7 transparent;
+}
+#wheel div.sec:nth-child(5) {
+  transform: rotate(300deg);
+  -webkit-transform: rotate(300deg);
+  -moz-transform: rotate(300deg);
+  -o-transform: rotate(300deg);
+  -ms-transform: rotate(300deg);
+  border-color: white transparent;
+}
+#wheel div.sec:nth-child(6) {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  border-color: #0ffaaf transparent;
+}
+
+#wheel div.sec span {
+  margin-top: -100px;
+  color: rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 10000000;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  display: inline-block;
+  margin-left: -30px;
+  top: -80px;
+
+  text-shadow: rgba(255, 255, 255, 0.1) 0px -1px 0px,
+    rgba(0, 0, 0, 0.2) 0px 1px 0px;
+}
+
+#wheel div.sec:nth-child(1) span {
+  color: white;
+  margin-left: -22px;
+}
+
+#wheel div.sec:nth-child(2) span {
+  margin-left: -16px;
+}
+
+#wheel div.sec:nth-child(5) span {
+  margin-left: -34px;
+}
+
+
+#spin {
+  width: 68px;
+  height: 68px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -34px 0 0 -34px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 0px;
+  z-index: 1000;
+  background: #eb8653;
+  cursor: pointer;
+  font-family: "Exo 2", sans-serif;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+#spin:after {
+  content: "PLAY";
+  text-align: center;
+  line-height: 68px;
+  color: #8d482c;
+  position: relative;
+  z-index: 100000;
+  width: 68px;
+  height: 68px;
+  display: block;
+}
+
+#spin:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 20px 28px 20px;
+  border-color: transparent transparent #eb8653 transparent;
+  top: -12px;
+  left: 14px;
+}
+
+#inner-spin {
+  width: 54px;
+  height: 54px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -27px 0 0 -27px;
+  border-radius: 50%;
+  background: #eb8653;
+  z-index: 999;
+  box-shadow: #c77247 0px -2px 0px inset, #c77247 0px 2px 0px inset, rgba(0, 0, 0, 0.4) 0px 0px 5px;
+}
+
+#spin:active #inner-spin {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 5px inset;
+}
+
+#spin:active:after {
+  font-size: 15px;
+}
+
+/*ANIMATION*/
+@-webkit-keyframes hh {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(7deg);
+    -webkit-transform: rotate(7deg);
+  }
+}
+
+@keyframes hh {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(7deg);
+    -webkit-transform: rotate(7deg);
+  }
+}
+
+.spin {
+  -webkit-animation: hh 0.1s; /* Chrome, Safari, Opera */
+  animation: hh 0.1s;
+}
+
+#mc_embed_signup {
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+input {
+  padding: 8px 16px;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+#wrapper form {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+h1 {
+  margin: 0 auto;
+}
+
+.the__wheel {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  max-width: 268px;
+}
+
+.button {
+  background-color: #eb8653 !important;
+}
+
+.notif {
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  width: 220px;
+}
+
+.notification {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: opacity .2s ease .2s;
+}
+
+.notification.visible {
+  transition: opacity .2s ease .2s;
+  opacity: 1;
+}
