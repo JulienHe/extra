@@ -71,22 +71,28 @@ $(document).ready(function () {
 				let textPrize;
 				switch (prize) {
 					case 2:
-						textPrize = "Golden Waffle";
+						textPrize = "Congratulations, you've just won our Iconic Golden Waffle! This Item will be added to your purchase, shipping included.";
+						imgPrize = 'img/waffle.jpg';
 						break;
 					case 3:
-						textPrize = "St Perpète Soap";
+						textPrize = "Congratulations, you've just won our exclusive St. Perpète Soap! This soap is crafted in Belgium with 100% premium natural products. This Item will be added to your purchase, shipping included.";
+						imgPrize = 'img/waffle.jpg';
 						break;
 					case 4:
-						textPrize = "EX-O Tote Bag ";
+						textPrize = "Congratulations, you've just won our exclusive Tote-Bag! This bag is made & silkscreened in Belgium. This Item will be added to your purchase, shipping included.";
+						imgPrize = 'img/waffle.jpg';
 						break;
 					case 5:
-						textPrize = "Baby Silk Scarf";
+						textPrize = "Congratulations, you've just won one of our exclusive 50x50cm Baby Silk Scarves (Value: 95€)! Select your design on our webshop and reply to our email with your selection. This Item will be added to your purchase, shipping included.";
+						imgPrize = 'img/waffle.jpg';
 						break;
 					case 6:
-						textPrize = "50€ Voucher";
+						textPrize = "Congratulations, you've just won a 50€ Voucher! This coupon is to be used on your next order in both our webshop and store. Reach us by email (shop@extra-ordinaire.co) and/or phone (+32.460 96 41 99) with your code to redeem your voucher. ";
+						imgPrize = 'img/waffle.jpg';
 						break;
 					case 7:
-						textPrize = "300€ Voucher";
+						textPrize = "Congratulations, you've just won a 300€ Voucher! This coupon is to be used on your next order in both our webshop and store. Reach us by email (shop@extra-ordinaire.co) and/or phone (+32.460 96 41 99) with your code to redeem your voucher. ";
+						imgPrize = 'img/waffle.jpg';
 						break;
 					default:
 						textPrize = "Too bad";
@@ -94,6 +100,7 @@ $(document).ready(function () {
 				console.log(textPrize);
 				setTimeout(function () {
 					$('.txt').html(textPrize);
+					$('.the__wheel__img').attr('src', imgPrize);
 					$('#spin').remove();
 					$('#wheel').remove();
 					$('.the__wheel__img').addClass('visible');

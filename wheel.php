@@ -67,7 +67,7 @@
             <div id="spin">
                 <div id="inner-spin"></div>
             </div>
-            <img src="img/waffle.jpg" alt="" class="the__wheel__img">
+            <img src="" alt="" class="the__wheel__img">
         </div>
         <p class="txt">On the Extra-Ordinaire Wheel, you ALWAYS win so try your luck and have your prize added to your
             basket,
