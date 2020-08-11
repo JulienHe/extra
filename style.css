@@ -186,7 +186,7 @@ a {
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 0px;
   z-index: 1000;
-  background: #eb8653;
+  background: #FFA500;
   cursor: pointer;
   font-family: "Exo 2", sans-serif;
 
@@ -216,7 +216,7 @@ a {
   height: 0;
   border-style: solid;
   border-width: 0 20px 28px 20px;
-  border-color: transparent transparent #eb8653 transparent;
+  border-color: transparent transparent #FFA500 transparent;
   top: -12px;
   left: 14px;
 }
@@ -229,9 +229,9 @@ a {
   left: 50%;
   margin: -27px 0 0 -27px;
   border-radius: 50%;
-  background: #eb8653;
+  background: #FFA500;
   z-index: 999;
-  box-shadow: #c77247 0px -2px 0px inset, #c77247 0px 2px 0px inset, rgba(0, 0, 0, 0.4) 0px 0px 5px;
+  box-shadow: #FFA500 0px -2px 0px inset, #FFA500 0px 2px 0px inset, rgba(0, 0, 0, 0.4) 0px 0px 5px;
 }
 
 #spin:active #inner-spin {
