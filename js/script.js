@@ -76,23 +76,23 @@ $(document).ready(function () {
 						break;
 					case 3:
 						textPrize = "Congratulations, you've just won our exclusive St. Perpète Soap! This soap is crafted in Belgium with 100% premium natural products. This Item will be added to your purchase, shipping included.";
-						imgPrize = 'img/waffle.jpg';
+						imgPrize = 'img/soap.jpg';
 						break;
 					case 4:
 						textPrize = "Congratulations, you've just won our exclusive Tote-Bag! This bag is made & silkscreened in Belgium. This Item will be added to your purchase, shipping included.";
-						imgPrize = 'img/waffle.jpg';
+						imgPrize = 'img/tote.jpg';
 						break;
 					case 5:
 						textPrize = "Congratulations, you've just won one of our exclusive 50x50cm Baby Silk Scarves (Value: 95€)! Select your design on our webshop and reply to our email with your selection. This Item will be added to your purchase, shipping included.";
-						imgPrize = 'img/waffle.jpg';
+						imgPrize = 'img/scarf.jpg';
 						break;
 					case 6:
 						textPrize = "Congratulations, you've just won a 50€ Voucher! This coupon is to be used on your next order in both our webshop and store. Reach us by email (shop@extra-ordinaire.co) and/or phone (+32.460 96 41 99) with your code to redeem your voucher. ";
-						imgPrize = 'img/waffle.jpg';
+						imgPrize = 'img/50.jpg';
 						break;
 					case 7:
 						textPrize = "Congratulations, you've just won a 300€ Voucher! This coupon is to be used on your next order in both our webshop and store. Reach us by email (shop@extra-ordinaire.co) and/or phone (+32.460 96 41 99) with your code to redeem your voucher. ";
-						imgPrize = 'img/waffle.jpg';
+						imgPrize = 'img/300.jpg';
 						break;
 					default:
 						textPrize = "Too bad";
