@@ -24,7 +24,7 @@
             <h2>Please type the code we sent you by email</h2>
             <div class="field">
                 <div class="control">
-                    <input class="input" id="orderNumber" name="orderNumber" type="text" placeholder="Your order number"
+                    <input class="input" id="orderNumber" name="orderNumber" type="text" placeholder="Your code"
                         required>
                 </div>
             </div>
